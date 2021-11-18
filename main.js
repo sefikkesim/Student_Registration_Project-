@@ -6,6 +6,7 @@ const clearAllBtn = document.querySelector("#clear-students");
 const tBody = document.querySelector("#Students");
 const loading = document.querySelector("#loading");
 const table = document.querySelector(".table");
+
 const ui = new UI();
 
 const showLoading = ()=>{
@@ -47,6 +48,14 @@ const clearAllStudents =()=>{
         studentRow.remove()
     })
     hideLoading()
-    
-    
 }
+const deleteStudent = (e)=>{
+    showLoading();
+    if(e.target.classList.contains("btn-danger")){
+        e.target.closest("tr").remove();
+    }
+    hideLoading()
+}
+
+tBody.addEventListener("click",deleteStudent)
+
