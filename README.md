@@ -1,3 +1,4 @@
 # Student_Registration_Project-
 
-![Student Registartion Project](https://user-images.githubusercontent.com/91076807/142396287-ca704139-1587-4ecd-9aca-dd3ff2082ed9.gif)
+
+![Student Registration Project](https://user-images.githubusercontent.com/91076807/142396915-7992418d-6953-47bf-a06a-cddcaf13d9a0.gif)
