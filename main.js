@@ -6,6 +6,8 @@ const clearAllBtn = document.querySelector("#clear-students");
 const tBody = document.querySelector("#Students");
 const loading = document.querySelector("#loading");
 const table = document.querySelector(".table");
+const textAdd = document.querySelector(".text-add")
+const textRemove = document.querySelector(".text-remove")
 
 const ui = new UI();
 
@@ -39,6 +41,8 @@ const addNewStudent =(e)=>{
   // let inputArray = document.querySelector(".form-control")
   ui.clearInputs([_url, _name, _path]);
   hideLoading();
+    showAddText();
+    hideAddText();
 }
 
 const clearAllStudents =()=>{
@@ -55,7 +59,33 @@ const deleteStudent = (e)=>{
         e.target.closest("tr").remove();
     }
     hideLoading()
+    showRemoveText();
+    hideRemoveText();
 }
 
 tBody.addEventListener("click",deleteStudent)
 
+ const showAddText = () =>{
+     setTimeout(() => {
+       textAdd.style.visibility ="visible";
+     },1500)
+    
+ }
+
+ const hideAddText = () =>{
+     setTimeout(()=>{
+        textAdd.style.visibility ="hidden";
+     },3000)
+    
+ }
+ const showRemoveText = () => {
+   setTimeout(() => {
+     textRemove.style.visibility ="visible";
+   }, 1500);
+ };
+
+ const hideRemoveText = () => {
+   setTimeout(() => {
+     textRemove.style.visibility ="hidden";
+   }, 3000);
+ };
